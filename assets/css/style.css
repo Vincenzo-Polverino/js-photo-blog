@@ -1,19 +1,33 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header{
-    background-image:url("../img/wall.png");
-    height: 100px;
+header {
+    background-image: url("../img/wall.png");
+
+    h1 {
+        font-size: 100px;
+        font-weight: 900;
+        text-align: center;
+        padding: 1rem;
+        font-family: "Edu TAS Beginner", cursive;
+    }
+
 }
 
-body{
-    background-image:url("../img/cork.png");
+body {
+    background-image: url("../img/cork.png");
     height: 100vh;
 }
 
-.card-body{
+.card-body {
     aspect-ratio: 1;
+}
+
+.title {
+    font-family: "Edu TAS Beginner", cursive;
+    margin: 1rem;
+
 }
