@@ -23,9 +23,9 @@ body {
 }
 
 .card-body {
-img{
-    width: 100%;
-}
+    img {
+        width: 100%;
+    }
 }
 
 .title {
@@ -37,4 +37,11 @@ img{
 .card:hover {
     transform: rotate(20deg) scale(1.2);
     z-index: 10;
+}
+
+.card-head {
+    img {
+        margin-bottom: -1.1rem;
+        z-index: 2;
+    }
 }

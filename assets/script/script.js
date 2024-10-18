@@ -1,28 +1,20 @@
 console.log('linked');
-
-
-const tilteEl = document.querySelector('.title');
-const photoEl = document.querySelector('.photo');
+const tilteEl = document.querySelectorAll('.title');
+const photoEl = document.querySelectorAll('.card'); // Modificato per selezionare l'elemento corretto
 
 axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
     .then(response => {
-        const photo = response.data
-        console.log(photo);
-        let photo_element = ''
-        photo.forEach(photo => {
-            const { albumId, title, url, thumbnailUrl } = photo
+        const photos = response.data;
+        photos.forEach((photo, i) => {
+            const { title, thumbnailUrl } = photo;
 
-            const markup = `
-            <div class="photo card-body d-flex justify-content-center align-items-center">
-                            <img src="${thumbnailUrl}" alt="">
-                        </div>
-                        <p>${title}</p>
-            `
-            photo_element += markup
-        })
+            photoEl[i].innerHTML = `
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <img src="${thumbnailUrl}" alt="">
+                    </div>
+                    <p class="title">${title}</p>
+                `;
 
-        photoEl.innerHTML = photo_element
-
+        });
     })
     .catch(error => console.error('Errore:', error));
-    
