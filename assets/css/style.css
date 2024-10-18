@@ -23,11 +23,18 @@ body {
 }
 
 .card-body {
-    aspect-ratio: 1;
+img{
+    width: 100%;
+}
 }
 
 .title {
     font-family: "Edu TAS Beginner", cursive;
     margin: 1rem;
 
+}
+
+.card:hover {
+    transform: rotate(20deg) scale(1.2);
+    z-index: 10;
 }
