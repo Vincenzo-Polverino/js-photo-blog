@@ -20,7 +20,6 @@ header {
 
 body {
     background-image: url("../img/cork.png");
-    background-size:contain;
     height: 100vh;
 }
 
