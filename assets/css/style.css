@@ -6,6 +6,7 @@
 
 header {
     background-image: url("../img/wall.png");
+    background-size:contain;
 
     h1 {
         font-size: 100px;
@@ -19,10 +20,12 @@ header {
 
 body {
     background-image: url("../img/cork.png");
+    background-size:contain;
     height: 100vh;
 }
 
 .card-body {
+    
     img {
         width: 100%;
     }
@@ -30,6 +33,7 @@ body {
 
 .title {
     font-family: "Edu TAS Beginner", cursive;
+    font-size: x-large;
     margin: 1rem;
 
 }
@@ -41,7 +45,12 @@ body {
 
 .card-head {
     img {
-        margin-bottom: -1.1rem;
+        margin-bottom: -1.2rem;
         z-index: 2;
     }
+}
+
+.card{
+    border: 0;
+    aspect-ratio: 1;
 }
