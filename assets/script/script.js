@@ -18,3 +18,11 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
         });
     })
     .catch(error => console.error('Errore:', error));
+
+    let modal_display = document.querySelectorAll('.modal')
+
+    photoEl.forEach(photo => {
+        photo.addEventListener("click", () => {
+            document.body.innerHTML += `<div class="modal"></div>`;
+        });
+    });
