@@ -9,7 +9,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
             const { title, url } = photo;
 
             photoEl[i].innerHTML = `
-                    <div class="card-body d-flex justify-content-center align-items-center">
+                    <div class="card-body d-flex justify-content-center align-items-start">
                         <img src="${url}" alt="">
                     </div>
                     <p class="title">${title}</p>
