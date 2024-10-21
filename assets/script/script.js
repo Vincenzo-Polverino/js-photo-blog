@@ -23,6 +23,6 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 
     photoEl.forEach(photo => {
         photo.addEventListener("click", () => {
-            document.body.innerHTML += `<div class="modal"></div>`;
+            document.body.innerHTML += ``;
         });
     });
