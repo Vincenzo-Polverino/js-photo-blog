@@ -9,12 +9,14 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
         const photos = response.data;
         photos.forEach((photo, i) => {
             const { title, url } = photo;
+            
+            const capitalized_title = title.charAt(0).toUpperCase() + title.slice(1)
 
             photoEl[i].innerHTML = `
                     <div class="card-body d-flex justify-content-center align-items-start">
                         <img src="${url}" alt="">
                     </div>
-                    <p class="title">${title}</p>
+                    <p class="title">${capitalized_title}</p>
                 `;
             photoEl[i].setAttribute('data-url', url);
         });
