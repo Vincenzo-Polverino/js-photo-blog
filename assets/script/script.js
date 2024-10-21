@@ -16,29 +16,36 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
                     </div>
                     <p class="title">${title}</p>
                 `;
-                photoEl[i].setAttribute('data-url', url);
+            photoEl[i].setAttribute('data-url', url);
         });
-        
+
         photoEl.forEach(photo => {
+
             photo.addEventListener("click", () => {
-    
+
                 const url = photo.getAttribute('data-url');
-                document.body.innerHTML +=
-                    `
-                <div class="modal d-flex justify-content-center align-items-center">
-                    <div>
-                        <div class=" d-flex flex-column">
+
+                const open_photo =
+                 `
+                    <div class="modal d-flex justify-content-center align-items-center">
+                        <div>
+                            <div class=" d-flex flex-column">
                             <img src="${url}" alt="foto">
+                            </div>
                         </div>
                     </div>
-                </div>
+
                 `;
-                
-              const closeEl = document.querySelectorAll('.modal')
+                document.body.insertAdjacentHTML('beforeend', open_photo)
+
+                const closeEl = document.querySelectorAll('.modal')
+
                 closeEl.forEach(close => {
+
                     close.addEventListener("click", () => {
+
                         document.querySelectorAll('.modal').forEach(modal => modal.remove());
-                        
+
                     });
                 });
             });
