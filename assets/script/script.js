@@ -16,7 +16,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
                     </div>
                     <p class="title">${title}</p>
                 `;
-
+                photoEl[i].setAttribute('data-url', url);
         });
         
         photoEl.forEach(photo => {
@@ -29,17 +29,14 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
                     <div>
                         <div class=" d-flex flex-column">
                             <img src="${url}" alt="foto">
-                        <button type="button" class="close_btn btn btn-primary my-5">
-                            Chiudi
-                        </button>
                         </div>
                     </div>
                 </div>
                 `;
                 
-              const closeEl = document.querySelectorAll('.close_btn')
-                closeEl.forEach(button => {
-                    button.addEventListener("click", () => {
+              const closeEl = document.querySelectorAll('.modal')
+                closeEl.forEach(close => {
+                    close.addEventListener("click", () => {
                         document.querySelectorAll('.modal').forEach(modal => modal.remove());
                         
                     });
