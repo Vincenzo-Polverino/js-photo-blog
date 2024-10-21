@@ -11,7 +11,7 @@
     width: 100%;
     background-color: #000000a6;
     z-index: 1000;
-    display: block;
+    display: none;
 }
 
 header {
